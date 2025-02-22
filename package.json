@@ -10,8 +10,8 @@
   "dependencies": {
     "@clerk/clerk-react": "^5.22.13",
     "@clerk/themes": "^2.2.19",
-    "react": "19.0.0-rc-b57d2823-20240822",
-    "react-dom": "19.0.0-rc-b57d2823-20240822",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "react-draggable": "^4.4.6",
     "react-router-dom": "^7.1.5",
     "vite": "^6.1.1"
