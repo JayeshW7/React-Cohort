@@ -1,20 +1,17 @@
+/* Universal styles */
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
     font-family: "Karla", sans-serif;
-    margin: 0;
-    background: linear-gradient(120deg, #a6c0fe, #f68084);
+    background: linear-gradient(135deg, #6e45e2, #88d3ce);
     background-size: 200% 200%;
-    animation: gradient-shift 8s infinite ease-in-out;
+    animation: gradient-shift 10s infinite ease-in-out;
     background-attachment: fixed;
-}
-
-main {
-    margin-inline: auto;
-    padding: 36px;
-    max-width: 600px;
+    color: #fff;
 }
 
 @keyframes gradient-shift {
@@ -22,98 +19,112 @@ main {
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
 }
+main {
+    margin: 40px auto;
+    padding: 36px;
+    max-width: 650px;
+    background: rgba(255, 255, 255, 0.15); /* Light transparent white */
+    border-radius: 15px;
+    backdrop-filter: blur(15px); /* Slight blur effect */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Stronger shadow for depth */
+    border: 2px solid rgba(255, 255, 255, 0.3); /* Subtle border */
+}
 
+/* 🔹 Header */
 .header {
     display: flex;
     align-items: center;
-    height: 65px;
-    background-image: linear-gradient(-225deg, #A445B2 0%, #D41872 52%, #FF0066 100%);
+    justify-content: space-between;
+    height: 70px;
+    background: linear-gradient(135deg, #A445B2, #D41872);
+    padding: 15px 25px;
     color: white;
-    padding: 20px;
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.header > img {
-    height: 100%;
-    margin-right: 6px;
+.header img {
+    height: 50px;
 }
 
-.header > h1 {
-    font-size: 1.25rem;
-    margin-right: auto;
+.header h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
-
+/* 🔹 Form Styling */
 .form {
     display: grid;
-    grid-template: auto auto / 1fr 1fr;
-    gap: 17px;
-    margin-bottom: 17px;
-    position: relative;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 20px;
 }
 
 .form input, .form textarea {
     width: 100%;
-    margin-top: 5px;
-    border-radius: 15px;
-    border: 2px solid #a6c0fe;
-    text-indent: 5px;
+    padding: 12px;
+    border-radius: 10px;
+    border: 2px solid #88d3ce;
     font-family: "Karla", sans-serif;
-    min-height: 40px;
-    padding: 10px;
-    transition: border-color 0.3s ease-in-out;
+    font-size: 1rem;
+    transition: all 0.3s ease-in-out;
 }
 
 .form input:focus, .form textarea:focus {
     border-color: #ff0066;
-    box-shadow: 0 0 10px rgba(255, 0, 102, 0.5);
+    box-shadow: 0 0 12px rgba(255, 0, 102, 0.4);
 }
 
 .form button {
     grid-column: 1 / -1;
     border-radius: 12px;
-    background: linear-gradient(90.41deg, #972dbb 1.14%, #A818DA 100%);
+    background: linear-gradient(135deg, #972dbb, #A818DA);
     color: white;
     border: none;
     cursor: pointer;
-    min-height: 40px;
-    font-family: "Karla", sans-serif;
+    font-size: 1rem;
+    padding: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
     transition: all 0.3s ease-in-out;
-    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
 }
 
 .form button:hover {
-    transform: scale(1.1);
-    background: linear-gradient(90.41deg, #ff0066 1.14%, #972dbb 100%);
-    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.9);
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #ff0066, #972dbb);
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.9);
 }
 
-
+/* 🔹 Meme Image & Text */
 .meme {
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    max-width: 550px;
+    margin: 0 auto;
 }
 
-.meme > img {
-    max-width: 100%;
+.meme img {
+    width: 100%;
+    max-width: 500px;
     height: auto;
-    border-radius: 3px;
+    border-radius: 8px;
     transition: transform 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .meme:hover img {
-    transform: translateY(-5px) scale(1.03);
+    transform: translateY(-5px) scale(1.05);
 }
 
 .meme span {
     position: absolute;
     text-align: center;
-    margin-block: 15px;
-    padding-inline: 5px;
+    width: 90%;
     font-family: impact, sans-serif;
-    font-size: 2rem;
+    font-size: 2.2rem;
     text-transform: uppercase;
     color: white;
     letter-spacing: 1px;
@@ -129,15 +140,15 @@ main {
         2px 2px 5px #000;
 }
 
-.bottom {
-    bottom: 0;
-}
-
 .top {
-    top: 0;
+    top: 10px;
 }
 
+.bottom {
+    bottom: 10px;
+}
 
+/* 🔹 Additional Text Input */
 .extra-text {
     position: absolute;
     display: flex;
@@ -147,62 +158,56 @@ main {
 }
 
 .extra-text input {
-    width: auto;
-    max-width: 250px;
+    width: 220px;
     font-size: 1.5rem;
-    margin-top: 5px;
-    padding: 8px;
-    border-radius: 5px;
-    border: 1px solid #D5D4D8;
-    text-indent: 5px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 2px solid #fff;
     font-family: impact, sans-serif;
     text-transform: uppercase;
     color: white;
     background: rgba(0, 0, 0, 0.6);
     letter-spacing: 1px;
-    text-shadow:
-        2px 2px 0 #000,
-        -2px -2px 0 #000,
-        2px -2px 0 #000,
-        -2px 2px 0 #000,
-        0 2px 0 #000,
-        2px 0 0 #000,
-        0 -2px 0 #000,
-        -2px 0 0 #000,
-        2px 2px 5px #000;
+    text-shadow: 2px 2px 5px black;
 }
 
-
+/* 🔹 Floating Add Button */
 .add-button {
     position: absolute;
     top: 10px;
     right: 10px;
-    font-size: 1.5rem;
-    padding: 10px;
+    font-size: 1.8rem;
+    padding: 12px;
     border-radius: 50%;
     background-color: #A818DA;
     color: white;
     border: none;
     cursor: pointer;
+    transition: transform 0.2s ease-in-out;
 }
 
+.add-button:hover {
+    transform: scale(1.2);
+    background-color: #ff0066;
+}
 
+/* 🔹 Auth Container */
 .auth-container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: linear-gradient(to top, #f43b47 0%, #453a94 100%);
+    background-image: linear-gradient(to top, #f43b47, #453a94);
+}
+
+/* 🔹 Clerk Customization */
+.cl-formButtonPrimary {
+    background-color: #A818DA !important;
+    border-radius: 10px;
+    padding: 12px;
+    transition: background 0.3s ease-in-out;
 }
 
 .cl-formButtonPrimary:hover {
-    background-color: #333 !important;
-}
-
-.meme img {
-    width: 100%; 
-    max-width: 500px; 
-    height: auto; 
-    display: block;
-    margin: 0 auto;
+    background-color: #ff0066 !important;
 }

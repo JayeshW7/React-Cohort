@@ -13,10 +13,10 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-draggable": "^4.4.6",
-    "react-router-dom": "^7.1.5",
-    "vite": "^6.1.1"
+    "react-router-dom": "^7.1.5"
   },
   "devDependencies": {
-    "@vitejs/plugin-react": "*"
+    "@vitejs/plugin-react": "*",
+    "vite": "^6.1.1"
   }
 }

@@ -4,8 +4,8 @@ export default function Main() {
     const [meme, setMeme] = useState({
         imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQApDrXtDgJix0lUafFfyfebFmA9DrbLmQ-1w&ss",
         texts: [
-            { id: 1, content: "You have\n passed", x: 13, y: 10, dragging: false },
-            { id: 2, content: "It's the\n Covid Test", x: 10, y: 60, dragging: false }
+            { id: 1, content: "You have\n passed", x: -18, y: 10, dragging: false },
+            { id: 2, content: "It's the\n Covid Test", x: -18, y: 60, dragging: false }
         ]
     });
 
