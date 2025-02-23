@@ -8,16 +8,13 @@ export default function App() {
         <Router>
             <Header />
             <div className="auth-buttons">
-                <SignedOut>
-                    <Navigate to="/login" replace />
-                </SignedOut>
                 <SignedIn>
                     <UserButton />
                 </SignedIn>
             </div>
 
             <Routes>
-                <Route path="/" element={<SignedIn><Main /></SignedIn>} />
+                <Route path="/" element={<Main />} />
                 <Route
                     path="/login"
                     element={
@@ -28,7 +25,6 @@ export default function App() {
                         </SignedOut>
                     }
                 />
-
                 <Route
                     path="/signup"
                     element={
@@ -39,7 +35,6 @@ export default function App() {
                         </SignedOut>
                     }
                 />
-
                 <Route path="*" element={<Navigate to="/" replace />} />
             </Routes>
         </Router>
